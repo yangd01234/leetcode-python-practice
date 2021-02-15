@@ -23,10 +23,8 @@ class Solution(object):
         j = 1
         
         for i in range (0, len(nums)):
-            if nums[i] != nums[j]:
+            if nums[i-1] != nums[i]:
                 nums[j] = nums[i]
-                # important: make sure to delete per question prompt
-                del nums[j]
                 j = j + 1
         # return the count of duplicates
         return j
