@@ -17,6 +17,11 @@ arrays. The result can be in any order.
 HINT: You CAN use counter and get the elements(), however this method doesn't
 need additional imports.
 
+Things to keep in mind:
+How can you use a temporary array?
+If it's just their intersection, what do you need to pull?
+Does the intersection have to be in order?
+How can you easily use an array for this?
 """
 
 class Solution(object):

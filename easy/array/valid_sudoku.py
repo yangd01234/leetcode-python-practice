@@ -48,6 +48,13 @@ Use hash or dict since we're dealing with unique values.
 
 One method: Use strings to keep track of unique values
 
+Things to keep in mind:
+What data structure should you use to keep track of things?
+How can you loop through and use strings to your advantage?
+What math operator should you use to keep track of the sub-grid (3x3) location?
+How would you store these strings?
+How can you then check for the three conditions using the data structure to lookup?
+why do you need to keep track of if something has been visited?
 """
 
 

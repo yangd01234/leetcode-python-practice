@@ -20,6 +20,9 @@ Output: 1
 
 HINT: You can use the exclusive OR method.  Essentially you return the value
 that didn't register as a 0 using XOR method.  
+
+What is the exclusive or method?
+How can you use these types of operators to your advantage?
 """
 
 

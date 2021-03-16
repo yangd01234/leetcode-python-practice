@@ -6,6 +6,12 @@ Do not allocate extra space for another array, you must do this by modifying the
 input array in-place with O(1) extra memory.
 
 Hint: You can add a runner pointer so the two pointers run at different speeds
+
+Things to keep in mind:
+What should you assert?
+How can you use runner pointers to your advantage?
+How would you swap?
+What should you keep in mind when swapping?
 """
 
 

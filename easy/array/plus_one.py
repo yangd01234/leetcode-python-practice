@@ -25,6 +25,12 @@ Input: digits = [0]
 Output: [1]
 
 HINT: You can use datatype manipulation to get around **
+
+Things to keep in mind:
+What can you convert the digits to?
+How can you then iterate throught his and find the answer?
+Do you need to convert it back to an int?
+
 """
 
 class Solution(object):

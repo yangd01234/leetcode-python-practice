@@ -10,6 +10,11 @@ Note: You may not engage in multiple transactions at the same time (i.e., you
 must sell the stock before you buy again).
 
 HINT: Runner pointer
+
+Things to keep in mind:
+How would you use a runner pointer for this?
+What do you need to loop through in order to find the prices?
+Why do you need to start at index 1?
 """
 
 
