@@ -26,7 +26,49 @@ Constraints:
 -105 <= nums[i] <= 105
 
 Things to keep in mind:
+How can you use two sum to your advantage?
+Why is it important that the array should be sorted?
+Do you actually need a dictionary for this?
+What should you keep track of if you don't need a dict?
+How can you use two pointers to your advantage?
+List out the things you need to keep track of when using two pointers.
+Why do you only need to increment one pointer when looping?
 """
 
 class Solution:
-    def threeSum(self, nums: List[int]) -> List[List[int]]:
+    def threeSum(self, nums):
+        # assert
+        if len(nums) < 1: return []
+
+        res = []
+        nums.sort()
+
+        for i, a in enumerate(nums):
+            if i > 0 and a == nums[i-1]:
+                continue
+            l, r = i + 1, len(nums) -1
+            while l < r:
+                three_sum = a + nums[l] + nums[r]
+                if three_sum > 0:
+                    r -= 1
+                elif three_sum < 0:
+                    l += 1
+                else:
+                    res.append([a, nums[l], nums[r]])
+                    l += 1
+                    while nums[l] == nums[l-1] and l < r:
+                        l += 1
+        return res
+
+
+nums1 = [-1,0,1,2,-1,-4]
+nums2 = []
+nums3 = [0]
+
+sol = Solution()
+# [[-1,-1,2],[-1,0,1]]
+print(sol.threeSum(nums1))
+# []
+print(sol.threeSum(nums2))
+# []
+print(sol.threeSum(nums3))
