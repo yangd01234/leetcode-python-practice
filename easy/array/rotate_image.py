@@ -14,6 +14,11 @@ Input: matrix = [[5,1,9,11],[2,4,8,10],[13,3,6,7],[15,14,12,16]]
 Output: [[15,13,2,5],[14,3,4,1],[12,6,8,9],[16,7,10,11]]
 
 HINT:
+
+Things to keep in mind:
+If you are flipping the array, what can you do first?
+What would you complete after step 1?
+How does swapping matrix elements help you to transpose?
 """
 
 class Solution(object):

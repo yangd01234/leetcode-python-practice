@@ -15,6 +15,10 @@ Think about runners and keeping track of the current position.
 You don't really need to keep track of where the 0's go.
 Track how many you have.
 
+Things to keep in mind:
+How can you use two loops to your advantage?
+Do you need to keep track of where the 0's go?
+Why is it beneficial to have an index?
 """
 
 

@@ -18,6 +18,10 @@ Input: [1,1,1,3,3,4,3,2,4,2]
 Output: true
 
 HINT: They key is in the type of sorting
+
+Things to keep in mind:
+What type of sorting can you do?
+How is this an easy check?
 """
 
 class Solution(object):

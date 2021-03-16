@@ -23,6 +23,12 @@ Input: nums = [3,3], target = 6
 Output: [0,1]
 
 HINT: Try to use a dict for faster lookup
+
+Things to keep in mind:
+What data structure can you use to keep lookup fast and simple?
+What keys and what values should you store?
+What can you check for the difference? How does that lead to your target?
+Why should you keep a dict of possible numbers that work?
 """
 
 
