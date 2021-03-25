@@ -46,7 +46,7 @@ class Solution:
             # set the smallest leftmost value
             if i < left:
                 left = i
-            # set the rightmost value
+            # set the mid value
             elif left < i < mid:
                 mid = i
             elif mid < i:
