@@ -15,27 +15,20 @@ Things to keep in mind:
 How would you use a runner pointer for this?
 What do you need to loop through in order to find the prices?
 Why do you need to start at index 1?
+How does getting incremental profits mean getting the max profit?
 """
 
 
 
-class Solution(object):
-    def maxProfit(self, prices):
-        """
-        :type prices: List[int]
-        :rtype: int
-        """
-        # find the total profit
-        profit_total = 0
-
-        # loop through list O(1) with +1 runner pointer
-        for i in range(1,len(prices)):
-        	difference = prices[i] - prices[i-1]
-        	# check if next day has profit
-        	if (difference) > 0:
-        		profit_total += difference
-
-        return profit_total
+class Solution:
+    def maxProfit(self, prices: List[int]) -> int:
+        # You can get the max by getting all the increments. Technically they should add up to the max value
+        total = 0
+        for i in range(1, len(prices)):
+            diff = prices[i] - prices[i-1]
+            if diff > 0:
+                total += diff
+        return total
         
 
 # ex_1 = 7; ex_2 = 4; ex_3 = 0

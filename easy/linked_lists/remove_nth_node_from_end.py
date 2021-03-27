@@ -33,6 +33,7 @@ What are you given?
 How can you assign all to head and why should you?
 What should you assert?
 How can you use runners and walkers?
+What do you need to assert as well when lookinig at linked list heads? Base cases?
 Instead of checking for future items like in arrays, what does the runner do here?
 How can you assign walker to delete?
 Why should you return head?

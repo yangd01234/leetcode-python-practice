@@ -12,6 +12,7 @@ What should you assert?
 How can you use runner pointers to your advantage?
 How would you swap?
 What should you keep in mind when swapping?
+How can you delete an array element?
 """
 
 
@@ -26,11 +27,11 @@ class Solution(object):
         if (len(nums) == 1): return 1
         
         # pointer 1
-        j = 1
+        j = 0
         
-        for i in range (0, len(nums)):
-            if nums[i-1] != nums[i]:
-                nums[j] = nums[i]
-                j = j + 1
-        # return the count of duplicates
-        return j
+        for i in range (0, len(nums)-1):
+            if nums[j] == nums[j+1]:
+                del nums[j]
+            else:
+                j += 1
+        return len(nums)

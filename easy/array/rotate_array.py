@@ -12,6 +12,7 @@ Method 2:
 How would you allocate a new array with all 0 values?
 What formula can you use to rotate the array by k steps?
 How can you assign an old array to a new one?
+For the second solution, why do you need the foruma (i+k) % n?
 """
 
 class Solution(object):

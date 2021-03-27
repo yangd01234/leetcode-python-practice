@@ -28,6 +28,8 @@ How can you traverse and get half of the singly linked list with while?
 How can you reverse the second half?
 What questions should you ask about manipulation of the linked list?
 How can you finally check if it is a palindrome?
+What do you need to check both runner and runner.next?
+
 """
 
 # Definition for singly-linked list.
@@ -38,33 +40,33 @@ How can you finally check if it is a palindrome?
 class Solution:
     def isPalindrome(self, head: ListNode) -> bool:
         # find the length of the node
-
         runner = head
         walker = head
-
-        # reach the middle
+        
+        # find the halfway point.  You won't need the runner after this. 
         while runner and runner.next:
-            # you set two next for runner to get half
             runner = runner.next.next
             walker = walker.next
-
-        # reverse second half
-        previous = None
-
+            
+        # reverse the second half of list
+        prev = None
         while walker:
+            # keep walker.next in temp (node)
             temp = walker.next
-            walker.next = previous
-            previous = walker
+            # set walker.next to our previous value (pointer)
+            walker.next = prev
+            # set prev to walker (node)
+            prev = walker
+            #re-assign walker to temp essentially move walker forward by 1 (node)
             walker = temp
-
+            
         # check if palindrome
-        left, right = head, previous
+        left, right = head, prev
         while right:
             if left.val != right.val:
                 return False
             left = left.next
             right = right.next
-
         return True
 
 

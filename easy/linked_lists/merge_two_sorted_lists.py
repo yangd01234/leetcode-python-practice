@@ -42,18 +42,21 @@ Is it ok to create a new ListNode object?
 #         self.next = next
 class Solution:
     def mergeTwoLists(self, l1: ListNode, l2: ListNode) -> ListNode:
-        temp = output = ListNode()
-
+        res = temp = ListNode()
+        
         while l1 and l2:
             if l1.val < l2.val:
-                output.next = l1
+                temp.next = l1
                 l1 = l1.next
             else:
-                output.next = l2
+                temp.next = l2
                 l2 = l2.next
-            output = output.next
-
-        if l1: output.next = l1
-        if l2: output.next = l2
-
-        return temp.next
+            temp = temp.next
+        
+        # assign the new tails
+        if l1: temp.next = l1
+        if l2: temp.next = l2
+        
+        # return next because res has no value
+        return res.next
+        
