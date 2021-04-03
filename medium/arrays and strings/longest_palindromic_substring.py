@@ -29,36 +29,30 @@ s consist of only digits and English letters (lower-case and/or upper-case),
 
 
 Things to keep in mind:
-Where should you start iteration?
-Think of sliding windows, can you set expanding windows?
-How would you account for edge cases like odd vs even palindromes?
+How can you use the middle expansion method here?
 """
 class Solution:
 
     def longestPalindrome(self, s: str) -> str:
+
+        def helper(l, r):
+            '''helper function checks expanded substring'''
+            while(l >= 0 and r < len(s) and s[l] == s[r]):
+                # three things happening here.  Check left within bounds, right within bounds, and still palindrome.
+                l -= 1
+                r += 1
+            return s[l+1:r] # return the substring
+
         res = ""
-        res_len = 0
-
         for i in range(len(s)):
-            left, right = i, i
-            # odd length palindrome
-            while left >= 0 and right < len(s) and s[left] == s[right]:
-                # we know palindrome
-                if (right - left + 1) > res_len:
-                    res = s[left:right+1]
-                    res_len = right - left + 1
-                # expand pointers
-                left -= 1
-                right += 1
+            # check pattern aba
+            test = helper(i,i)
+            if len(test) > len(res):
+                res = test
+            # check pattern aa
+            test = helper(i, i+1)
+            if len(test) > len(res):
+                res = test
 
-            # even length palindrome
-            left, right = i, i + 1
-            while left >= 0 and right < len(s) and s[left] == s[right]:
-                # we know palindrome
-                if (right - left + 1) > res_len:
-                    res = s[left:right+1]
-                    res_len = right - left + 1
-                # epand pointers
-                left -= 1
-                right += 1
         return res
+
